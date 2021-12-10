@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.31908.433
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cwregex", "cwregex.csproj", "{AAE22BD5-2959-4F0F-BAED-40E0B1825DE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "puzzletest", "..\puzzletest\puzzletest.csproj", "{FC976135-6427-40B5-8F47-E48A2DFD4E92}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAE22BD5-2959-4F0F-BAED-40E0B1825DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAE22BD5-2959-4F0F-BAED-40E0B1825DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAE22BD5-2959-4F0F-BAED-40E0B1825DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAE22BD5-2959-4F0F-BAED-40E0B1825DE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC976135-6427-40B5-8F47-E48A2DFD4E92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC976135-6427-40B5-8F47-E48A2DFD4E92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC976135-6427-40B5-8F47-E48A2DFD4E92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC976135-6427-40B5-8F47-E48A2DFD4E92}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {67BD1955-AD7C-4B30-94EB-41E1DF3F86EB}
+	EndGlobalSection
+EndGlobal
