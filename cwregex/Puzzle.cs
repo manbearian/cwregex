@@ -137,6 +137,8 @@ public class Puzzle
 
     public string GetClue(Direction direction, int index) => clues[(int)direction, index].ToString();
 
+    public char? Get(int index) => values[index];
+
     public string? Get(Direction direction, int index)
     {
         if (index < 0 || index >= 13)

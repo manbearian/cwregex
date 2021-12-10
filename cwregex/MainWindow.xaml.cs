@@ -21,9 +21,9 @@ namespace cwregex;
 public partial class MainWindow : Window
 {
 
-    Puzzle p = new Puzzle();
-    TextBox[] textBoxes;
-    Label[,] labels = new Label[3,13];
+    readonly Puzzle p = new Puzzle();
+    readonly TextBox[] textBoxes;
+    readonly Label[,] labels = new Label[3,13];
 
     public MainWindow()
     {
@@ -88,6 +88,31 @@ public partial class MainWindow : Window
                 textBoxes[ix++] = tb;
             }
         }
+
+        RestoreState();
+    }
+
+    private void RestoreState()
+    {
+        var savedValues = Properties.Settings.Default.values;
+        if (savedValues?.Length == p.MaxIndex)
+        {
+            for (int i = 0; i < p.MaxIndex; ++i)
+            {
+                textBoxes[i].Text = savedValues[i]?.ToString() ?? "";
+                p.Set(i, savedValues[i]);
+            }
+        }
+    }
+
+    private void SaveState()
+    {
+        Properties.Settings.Default.values = new char?[p.MaxIndex];
+        for (int i = 0; i < p.MaxIndex; ++i)
+        {
+            Properties.Settings.Default.values[i] = p.Get(i);
+        }
+        Properties.Settings.Default.Save();
     }
 
     private void TextBox_PreviewGotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
@@ -103,6 +128,8 @@ public partial class MainWindow : Window
             string text = textBoxes[i].Text;
             p.Set(i, string.IsNullOrEmpty(text) ? null : text[0]);
         }
+
+        SaveState();
 
         if (sender is TextBox tb && tb.Text != "")
         {
